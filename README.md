@@ -1,2 +1,2 @@
-# desafios-dio-orange-tech
-Repositório destinado aos desafios do bootcamp "Orange Tech +" em parceria com a DIO.
+# Desafios de projetos desenvolvidos durante o Bootcamp Orange Tech + DIO
+Repositório destinado aos desafios de projetos desenvolvidos durante todo o Botcamp.
