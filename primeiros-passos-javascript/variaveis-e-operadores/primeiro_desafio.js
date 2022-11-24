@@ -9,7 +9,7 @@ Imprima no console o valor que será gasto para realizar esta viagem. */
 
 let combustivelPreco = 6; /* preço da gasolina na Paraíba */
 const KmPorLitro = 10;
-let distanciaKm = 100;
+distanciaKm = 100;
 
 let litrosConsumidos = distanciaKm / KmPorLitro;
 let valorGasto = litrosConsumidos * combustivelPreco;
