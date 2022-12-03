@@ -24,6 +24,8 @@ pokeApi.getPokemonDetail = (pokemon) => {
 
 pokeApi.getPokemons = (offset = 0, limit = 10) => {
   const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+  /* const url_characteristic = `https://pokeapi.co/api/v2/characteristic?offset=${offset}&limit=${limit}`
+  const url_ability = `https://pokeapi.co/api/v2/ability?offset=${offset}&limit${limit}`   */
 
   return fetch(url)
     .then((response) => response.json())
@@ -31,6 +33,25 @@ pokeApi.getPokemons = (offset = 0, limit = 10) => {
     .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
     .then((detailRequests) => Promise.all(detailRequests))
     .then((pokemonsDetails) => pokemonsDetails);
+};
+
+pokeApi.pokemonDetails = async (id) => {
+  console.log(" id  ", id);
+  const result = await fetch(`https://pokeapi.co/api/v2/characteristic/${id}`)
+    .then((response) => response.json())
+    .then((descriptions) => descriptions);
+  const descriptions = result.descriptions;
+  let descriptionPokemon = "";
+
+  descriptions.forEach((description) => {
+    //console.log(description.description);
+    if (description.language.name === "en") {
+      descriptionPokemon = description.description;
+      return;
+    }
+    console.log(descriptionPokemon);
+    return descriptionPokemon;
+  });
 };
 
 /* Promise.all([

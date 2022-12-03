@@ -146,6 +146,18 @@ h1 {
   padding: 1rem;
 }
 
+.maisDetalhesPokemons button {
+  display: flex;
+  color: #111;
+  opacity: 0.9;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
 .pagination button {
   color: #fff;
   background-color: #6c79db;
